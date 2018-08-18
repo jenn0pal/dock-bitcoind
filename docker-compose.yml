@@ -1,0 +1,11 @@
+version: '3'
+services:
+    node:
+        build: .
+        volumes:
+            - ./node:/root/.bitcoin
+            - ./bitcoin.conf:/root/.bitcoin/bitcoin.conf
+        ports:
+            - 8332:8332
+            - 8333:8333
+
